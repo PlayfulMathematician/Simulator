@@ -25,7 +25,5 @@ class DiceSimulation(FrequencySimulation):
 def f():
     return FrequencySimulation([random.uniform(-1, 1)**2 + random.uniform(-1, 1)**2 < 1 for i in range(0, 100000)])
 
-
-a = FrequencySimulation([f().frequency_data[True]*4 for i in range(0, 100)]).frequency_data
-print(sum(list(a.keys()))/100)
+print(sum([f().frequency_data[True]*4 for i in range(0, 100)])/100)
 print(f().frequency_data[True]*4)
