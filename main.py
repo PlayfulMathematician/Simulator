@@ -40,5 +40,4 @@ def f():
     )
 
 
-print(sum([f().frequency_data[True] * 4 for i in range(0, 100)]) / 100)
-print(f().frequency_data[True] * 4)
+a = [f().frequency_data[True] * 4 for i in range(0, 100)]
