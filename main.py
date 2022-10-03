@@ -41,3 +41,5 @@ def f():
 
 
 a = [f().frequency_data[True] * 4 for i in range(0, 100)]
+plt.hist(a, 100)
+plt.show()
