@@ -31,15 +31,17 @@ class DiceSimulation(FrequencySimulation):
         )
 
 
-def f():
+def f(points_choosen):
     return FrequencySimulation(
         [
             random.uniform(-1, 1) ** 2 + random.uniform(-1, 1) ** 2 < 1
-            for i in range(0, 100000)
+            for i in range(0, points_choosen)
         ]
     )
 
 
-a = [f().frequency_data[True] * 4 for i in range(0, 100)]
-plt.hist(a, 100)
+points_choosen = int(input("How many points"))
+sim_num = int(input("How many Simulations will you run"))
+a = [f(points_choosen).frequency_data[True] * 4 for i in range(0, sim_num)]
+plt.hist(a, sim_num)
 plt.show()
