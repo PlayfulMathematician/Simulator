@@ -9,8 +9,6 @@ import time
 class FrequencySimulation:
     """This is the frequency simulator"""
 
-    """"""
-
     def __init__(self, l):
         self.l = l
 
